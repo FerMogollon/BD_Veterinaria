@@ -68,7 +68,7 @@ CREATE TRIGGER
 
 ## 3. Cargar los datos iniciales
 
-1. Abre la terminal y navega hasta la carpeta del repositorio ocupando:
+1. Verifica que la terminal sigua en la carpeta del repositorio, en caso de contrario abre la terminal y navega hasta la carpeta del repositorio ocupando:
 ```bash
 cd .\BD_Veterinaria\
 ```
