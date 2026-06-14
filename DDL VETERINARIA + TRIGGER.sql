@@ -41,6 +41,8 @@ create table Veterinario_Especialiad(
 		on update cascade on delete restrict
 );
 
+DROP TABLE Veterinario_Especialiad;
+
 create table Mascota(
 	ID_Mascota bigint generated always as identity,
 	Especie varchar(150) not null,
