@@ -29,7 +29,7 @@ create table Especialidad(
 	constraint ck_especialidad_estado check (Estado in ('Activo', 'Inactivo', 'Suspendido'))
 );
 
-create table Veterinario_Especialiad(
+create table Veterinario_Especialidad(
 	ID_Veterinario bigint not null,
 	ID_Especialidad bigint not null,
 	constraint pk_veterinario_especialidad primary key(ID_Veterinario, ID_Especialidad),
@@ -41,7 +41,6 @@ create table Veterinario_Especialiad(
 		on update cascade on delete restrict
 );
 
-DROP TABLE Veterinario_Especialiad;
 
 create table Mascota(
 	ID_Mascota bigint generated always as identity,
