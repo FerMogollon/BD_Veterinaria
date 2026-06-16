@@ -1,6 +1,6 @@
 -- Este es el archivo con las consultas SQL desarrolladas para el proyecto. 
 
--- Mascotas más atendidas en el mes actual
+-- Mascotas más atendidas en el mes y año actuales
 select m.nombre mascota, count(c.id_mascota) veces_atendido
 from mascota m
 join cita c on m.id_mascota = c.id_mascota 
@@ -10,7 +10,7 @@ group by m.id_mascota, m.nombre
 order by count(c.id_mascota) desc
 limit 5; 
 
--- Veterinarios ordenados segun el mayor numero de citas en el segundo trimestre
+-- Veterinarios ordenados segun el mayor numero de citas en el segundo trimestre del año actual
 select v.nombre veterinario, count(c.id_cita) numero_citas 
 from veterinario v 
 join cita c on v.id_veterinario = c.id_veterinario 
@@ -19,7 +19,7 @@ and extract(year from c.fecha) = extract(year from current_date)
 group by veterinario, v.id_veterinario 
 order by numero_citas desc; 
 
---  Medicamentos prescritos con mayor frecuencia
+-- Medicamentos prescritos con mayor frecuencia
 select i.descripcion medicamento, count(t.id_medicamento) veces_prescrito
 from medicamento m
 join tratamiento t on m.id_medicamento = t.id_medicamento
@@ -39,30 +39,19 @@ join factura f on c.id_cita = f.id_cita
 group by e.id_especialidad, e.nombre
 order by ingresos_totales desc;
 
--- Propietarios con mascotas quehan asistido 
--- a citas en los últimos 6 meses 
--- este sale con un left join dandole where donde todos son null del lado de citas
--- usar nulls first
-select p.nombre propietario, m.nombre mascota
-from propietario p 
+-- Propietarios con mascotas que han asistido a citas en los últimos 6 meses
+select distinct p.nombre propietario, m.nombre mascota
+from propietario p
 join mascota m on p.id_propietario = m.id_propietario
-left join cita c on m.id_mascota = c.id_mascota 
-and c.fecha >= current_date - interval '6 months'
-order by propietario; 
+join cita c on m.id_mascota = c.id_mascota
+where c.fecha >= current_date - interval '6 months'
+order by propietario;
 
--- propietarios con más de una mascota
-select p.nombre propietario, string_agg(m.nombre, ', ') mascotas,
+-- Propietarios con más de una mascota
+select p.nombre propietario, string_agg(m.nombre, ', ' order by m.nombre) mascotas,
 count(m.id_mascota) cantidad_mascotas
 from propietario p 
 join mascota m on p.id_propietario = m.id_propietario 
 group by propietario
 having count(m.id_mascota) > 1
 order by cantidad_mascotas desc;
-
-
-
-
-
-
-
-
