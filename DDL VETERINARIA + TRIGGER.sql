@@ -282,12 +282,30 @@ for each row
 execute function verificar_inventario_medicamento();
 
 
+--trigger para el estado de las citas
+create or replace function actualizacion_citas()
+returns trigger as $$
+	begin
+		if new.estado = 'Cancelado' then return new;
+		end if;
+
+		if new.fecha < current_date then new.estado := 'Cancelado';
+		elseif new.fecha = current_date then new.estado := 'Completado';
+		end if;
+		return new;
+	end;
+$$ language plpgsql;
+
+create trigger actualizar_citas before insert or update on cita
+for each row 
+execute function actualizacion_citas();
+
 
 --funcion para marcado automatico de citas pasadas
 
 --Evaluar si se usar el procedure para poder hacer el cambio automatico para citas de fechas pasadas
 create or replace procedure citas_completadas_portiempo_vencido() 
-returns trigger as $$
+as $$
 	begin
 		update cita
 		set estado = 'Cancelado'
