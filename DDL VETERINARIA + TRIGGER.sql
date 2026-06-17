@@ -220,4 +220,41 @@ for each row
 execute function actualizar_monto_factura();
 
 
+-- trigger de control de alergias
+create or replace function verificar_alergia_medicamento()
+returns trigger as $$
+declare
+    v_especie_mascota varchar(150);
+    v_nombre_mascota varchar(150);
+    v_precauciones_medicamento varchar(500);
+    v_nombre_medicamento varchar(500);
+begin
+    select m.Especie, m.Nombre 
+    into v_especie_mascota, v_nombre_mascota
+    from Diagnostico d
+    join Cita c on d.ID_Cita = c.ID_Cita
+    join Mascota m on c.ID_Mascota = m.ID_Mascota
+    where d.ID_Diagnostico = new.ID_Diagnostico;
+
+    select med.Precauciones, item.Descripcion 
+    into v_precauciones_medicamento, v_nombre_medicamento
+    from Medicamento med
+    join Item_Facturable item on med.ID_Medicamento = item.ID_Item
+    where med.ID_Medicamento = new.ID_Medicamento;
+
+    if v_precauciones_medicamento ilike '%' || v_especie_mascota || '%' then
+        raise exception 'ALERTA VETERINARIA: La mascota "%" es de especie "%". El medicamento "%" indica contraindicación/alergia: "%". Registro denegado.', 
+            v_nombre_mascota, v_especie_mascota, v_nombre_medicamento, v_precauciones_medicamento;
+    end if;
+
+    return new;
+end;
+$$ language plpgsql;
+
+-- Crear el disparador en la tabla Tratamiento
+create trigger trg_verificar_alergia_medicamento
+before insert or update on Tratamiento
+for each row
+execute function verificar_alergia_medicamento();
+
 
