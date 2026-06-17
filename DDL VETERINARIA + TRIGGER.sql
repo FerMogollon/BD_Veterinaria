@@ -280,3 +280,19 @@ $$ language plpgsql;
 create trigger actualizar_inventario before insert or update on detalle_factura
 for each row
 execute function verificar_inventario_medicamento();
+
+
+
+--funcion para marcado automatico de citas pasadas
+
+--Evaluar si se usar el procedure para poder hacer el cambio automatico para citas de fechas pasadas
+create or replace procedure citas_completadas_portiempo_vencido() 
+returns trigger as $$
+	begin
+		update cita
+		set estado = 'Cancelado'
+    	where fecha < current_date and estado not in ('Completado', 'Cancelado');
+	end;
+$$ language plpgsql;
+
+----
