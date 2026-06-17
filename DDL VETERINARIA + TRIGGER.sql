@@ -258,3 +258,25 @@ for each row
 execute function verificar_alergia_medicamento();
 
 
+--Trigger de inventaria
+
+create or replace function verificar_inventario_medicamento() 
+returns trigger as $$
+	declare 
+		stock_actual int;
+	begin
+		select stock into stock_actual
+		from item_facturable
+		where id_item = new.id_item;
+		
+		if stock_actual < new.cantidad then 
+			raise exception 'Bajo inventario de item ID: %. Disponible: %, Solicitado: %', new.id_item, stock_actual, new.cantidad;
+		end if;
+
+		return new;
+	end;
+$$ language plpgsql;
+
+create trigger actualizar_inventario before insert or update on detalle_factura
+for each row
+execute function verificar_inventario_medicamento();
