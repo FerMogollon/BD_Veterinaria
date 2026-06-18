@@ -349,7 +349,8 @@ execute function actualizacion_citas();
 
 --funcion para marcado automatico de citas pasadas
 
---Evaluar si se usa el procedure para poder hacer el cambio automatico para citas de fechas pasadas
+--Evalua si la fecha de una cita ya paso y no fue marcada como 'completada' o 'cancelada' hace 
+--el cambio automatico a 'cancelada'
 create or replace procedure citas_completadas_portiempo_vencido() 
 as $$
 	begin
@@ -373,9 +374,9 @@ begin
 
     -- Si el ID que intenta facturar no coincide con el dueño verdadero, se bloquea la transaccian
     if new.ID_Propietario != v_propietario_real then
-        raise exception 'VIOLACIÓN DE LoGICA DE NEGOCIO: Intento de fraude o error. El cliente (ID: %) no es el dueño de la mascota de la cita %. El dueño legítimo es el cliente (ID: %).', new.ID_Propietario, new.ID_Cita, v_propietario_real;
+        raise exception 'VIOLACIÓN DE LOGICA DE NEGOCIO: Intento de fraude o error. El cliente (ID: %) no es el dueño de la mascota de la cita %. El dueño legítimo es el cliente (ID: %).',
+		new.ID_Propietario, new.ID_Cita, v_propietario_real;
     end if;
-
     -- Si todo coincide dejamos que el insert o update continue normalmente
     return new;
 end;
@@ -388,3 +389,18 @@ for each row
 execute function fn_validar_dueño_factura();
 
 --67
+--trigger para cambiar el estado de la cita al pagar la cita
+create or replace function Estado_cita_por_pago_completado() 
+returns trigger as $$
+	begin
+		update cita
+		set estado = 'Completada'
+		where id_cita = new.id_cita;
+		return new;
+	end;
+$$ language plpgsql;
+
+create trigger estado_por_pago_factura 
+before insert or update on factura
+for each row 
+execute function Estado_cita_por_pago_completado();
