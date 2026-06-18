@@ -69,7 +69,7 @@ insert into Especialidad (Nombre, Estado) values ('Fisioterapia y Rehabilitació
 insert into Especialidad (Nombre, Estado) values ('Nutrición veterinaria', 'Activo');
 insert into Especialidad (Nombre, Estado) values ('Urgencias y Cuidados Intensivos', 'Activo');
 insert into Especialidad (Nombre, Estado) values ('Reproducción Animal', 'Activo');
---select * from especialidad;
+-- select * from especialidad;
 
 
 
@@ -97,7 +97,7 @@ insert into Veterinario_Especialidad (ID_Veterinario, ID_Especialidad) values (7
 insert into Veterinario_Especialidad (ID_Veterinario, ID_Especialidad) values (1, 8);
 insert into Veterinario_Especialidad (ID_Veterinario, ID_Especialidad) values (5, 14);
 insert into Veterinario_Especialidad (ID_Veterinario, ID_Especialidad) values (5, 16);
---select * from Veterinario_Especialidad;
+-- select * from Veterinario_Especialidad;
 
 
 
@@ -216,24 +216,24 @@ insert into Procedimiento (ID_Procedimiento, Riesgo, Tiempo_Estimado) values (33
 insert into Procedimiento (ID_Procedimiento, Riesgo, Tiempo_Estimado) values (34, 'Medio - Requiere sedación profunda', 45);
 insert into Procedimiento (ID_Procedimiento, Riesgo, Tiempo_Estimado) values (35, 'Bajo - Resequedad en vías respiratorias', 60);
 insert into Procedimiento (ID_Procedimiento, Riesgo, Tiempo_Estimado) values (36, 'Alto - Reacción hemolítica o shock anafiláctico', 120);
---select * from procedimiento;
+-- select * from procedimiento;
 
 
 
 
 
 --MEDICAMENTO
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (12, 'Oral', '15 mg/kg cada 12 horas', 'No administrar a animales con historial de alergia a la penicilina.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (13, 'Oral / Subcutánea', '0.2 mg/kg el primer día, luego 0.1 mg/kg', 'Contraindicado en pacientes con úlceras gastrointestinales o deshidratación.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (14, 'Oral', '1 a 2 mg/kg cada 24 horas', 'No interrumpir el tratamiento abruptamente si ha sido prolongado.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (15, 'Oral / Inyectable', '5 mg/kg cada 24 horas', 'Evitar en animales jóvenes en fase de crecimiento por riesgo de daño en cartílagos.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (16, 'Oral / Subcutánea', '0.2 a 0.4 mg/kg dosis única', 'Altamente tóxico en razas tipo Collie, Pastor Australiano y sus cruzas.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (17, 'Oral', '10 mg/kg cada 24 horas con comida', 'Puede causar esofagitis, administrar siempre acompañada de agua o alimento.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (18, 'Oral', '0.7 a 1 mg/kg cada 24 horas en ayunas', 'El uso prolongado puede afectar la absorción de ciertos nutrientes.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (19, 'Oral / Intravenosa', '15 a 25 mg/kg cada 12 horas', 'Puede generar trastornos neurológicos temporales si se exceden las dosis.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (20, 'Oral / Intramuscular', '2 a 4 mg/kg cada 8 horas', 'Puede provocar sedación profunda, estreñimiento o cambios de conducta leves.', 100);
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (21, 'Intramuscular / Subcutánea', '0.5 a 1 ml por cada 10 kg', 'Mantener refrigerado y proteger de la luz solar directa.', 100);
---select * from Medicamento;
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (12, 'Oral', '15 mg/kg cada 12 horas', 'No administrar a animales con historial de alergia a la penicilina.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (13, 'Oral / Subcutánea', '0.2 mg/kg el primer día, luego 0.1 mg/kg', 'Contraindicado en pacientes con úlceras gastrointestinales o deshidratación.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (14, 'Oral', '1 a 2 mg/kg cada 24 horas', 'No interrumpir el tratamiento abruptamente si ha sido prolongado.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (15, 'Oral / Inyectable', '5 mg/kg cada 24 horas', 'Evitar en animales jóvenes en fase de crecimiento por riesgo de daño en cartílagos.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (16, 'Oral / Subcutánea', '0.2 a 0.4 mg/kg dosis única', 'Altamente tóxico en razas tipo Collie, Pastor Australiano y sus cruzas.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (17, 'Oral', '10 mg/kg cada 24 horas con comida', 'Puede causar esofagitis, administrar siempre acompañada de agua o alimento.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (18, 'Oral', '0.7 a 1 mg/kg cada 24 horas en ayunas', 'El uso prolongado puede afectar la absorción de ciertos nutrientes.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (19, 'Oral / Intravenosa', '15 a 25 mg/kg cada 12 horas', 'Puede generar trastornos neurológicos temporales si se exceden las dosis.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (20, 'Oral / Intramuscular', '2 a 4 mg/kg cada 8 horas', 'Puede provocar sedación profunda, estreñimiento o cambios de conducta leves.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones, stock) values (21, 'Intramuscular / Subcutánea', '0.5 a 1 ml por cada 10 kg', 'Mantener refrigerado y proteger de la luz solar directa.', 100);
+-- select * from Medicamento;
 
 
 
@@ -278,7 +278,7 @@ insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) 
 insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) values ('2026-06-28', '14:00:00', 'Consultorio B', 'Programada', 37, 7);
 insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) values ('2026-06-29', '15:30:00', 'Consultorio C', 'Programada', 38, 8);
 insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) values ('2026-06-30', '09:00:00', 'Consultorio A', 'Programada', 39, 9);
---select * from cita;
+-- select * from cita;
 
 
 
@@ -322,7 +322,7 @@ insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (
 insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (29,13);
 insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (35,16);
 insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (28,17);
---select * from diagnostico_procedimiento;
+select * from diagnostico_procedimiento;
 
 
 
@@ -366,10 +366,14 @@ insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-13',0,
 insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-13',0,8,7);
 insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-14',0,9,8);
 insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-14',0,10,9);
-insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-16',0,13,10);
-insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-16',0,14,11);
-insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-17',0,15,2);
+insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-16',0,13,2);
+insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-16',0,14,12);
+insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-17',0,15,13);
 --select * from factura;
+
+
+
+
 
 
 
@@ -420,6 +424,7 @@ select
     num_factura 
 from Factura 
 where monto > 0;
+--select * from pago;
 
 
 
@@ -440,6 +445,7 @@ where monto > 0;
 update factura set id_propietario = 13
 where id_cita = 15;
 
+-- esta de aqui da error, validando el funcionamiento de nuestro trigger validar dueño factura
 update factura
 set id_propietario = 13
 where id_cita = 13;

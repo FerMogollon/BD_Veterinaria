@@ -281,13 +281,18 @@ where ID_Medicamento = 12;
 insert into diagnostico (Descripcion, ID_Cita) 
 values ('Evaluación de rutina para Manchitas la Cobaya', 22);
 
-select id_diagnostico, id_cita  from diagnostico;
-
 insert into tratamiento (Frecuencia, Dosis, Vigencia, Descripcion, ID_Diagnostico, ID_Medicamento) 
-values ('Cada 12 horas', '250 mg', '2026-07-20', 'Tratamiento de prueba alérgica', 21, 12);
+values (
+    'Cada 12 horas', 
+    '250 mg', 
+    '2026-07-20', 
+    'Tratamiento de prueba alérgica', 
+    (select max(id_diagnostico) from diagnostico), -- Captura el ID recién creado
+    12
+);
 
 
---Trigger de inventaria
+--Trigger de inventario
 
 create or replace function verificar_inventario_medicamento() 
 returns trigger as $$
@@ -344,7 +349,7 @@ execute function actualizacion_citas();
 
 --funcion para marcado automatico de citas pasadas
 
---Evaluar si se usar el procedure para poder hacer el cambio automatico para citas de fechas pasadas
+--Evaluar si se usa el procedure para poder hacer el cambio automatico para citas de fechas pasadas
 create or replace procedure citas_completadas_portiempo_vencido() 
 as $$
 	begin
@@ -354,8 +359,6 @@ as $$
 	end;
 $$ language plpgsql;
 
-----
-<<<<<<< HEAD
 -- verificar la propiedad de la mascota
 create or replace function fn_validar_dueño_factura()
 returns trigger as $$
@@ -383,14 +386,5 @@ create trigger trg_seguridad_facturacion
 before insert or update on Factura
 for each row
 execute function fn_validar_dueño_factura();
-=======
 
-SELECT m.Especie, m.Nombre 
-FROM Diagnostico d
-JOIN Cita c ON d.ID_Cita = c.ID_Cita
-JOIN Mascota m ON c.ID_Mascota = m.ID_Mascota
-WHERE d.ID_Diagnostico = 21;
-
--- Consulta B: Ver exactamente qué precauciones tiene el medicamento 12
-SELECT Precauciones FROM Medicamento WHERE ID_Medicamento = 12;
->>>>>>> cd8d97c9e673527e8072a6cf53f65fbe383699d7
+--67
