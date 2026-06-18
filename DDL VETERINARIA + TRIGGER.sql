@@ -257,6 +257,19 @@ before insert or update on Tratamiento
 for each row
 execute function verificar_alergia_medicamento();
 
+--probar funcionamiento del disparador del control de alergias
+update medicamento 
+set precauciones = 'Altamente contraindicado en la especie Cobaya por shocks alérgicos agudos.' 
+where ID_Medicamento = 12;
+
+insert into diagnostico (Descripcion, ID_Cita) 
+values ('Evaluación de rutina para Manchitas la Cobaya', 22);
+
+select id_diagnostico, id_cita  from diagnostico;
+
+insert into tratamiento (Frecuencia, Dosis, Vigencia, Descripcion, ID_Diagnostico, ID_Medicamento) 
+values ('Cada 12 horas', '250 mg', '2026-07-20', 'Tratamiento de prueba alérgica', 21, 12);
+
 
 --Trigger de inventaria
 
@@ -314,3 +327,12 @@ as $$
 $$ language plpgsql;
 
 ----
+
+SELECT m.Especie, m.Nombre 
+FROM Diagnostico d
+JOIN Cita c ON d.ID_Cita = c.ID_Cita
+JOIN Mascota m ON c.ID_Mascota = m.ID_Mascota
+WHERE d.ID_Diagnostico = 21;
+
+-- Consulta B: Ver exactamente qué precauciones tiene el medicamento 12
+SELECT Precauciones FROM Medicamento WHERE ID_Medicamento = 12;
