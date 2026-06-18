@@ -223,16 +223,16 @@ insert into Procedimiento (ID_Procedimiento, Riesgo, Tiempo_Estimado) values (36
 
 
 --MEDICAMENTO
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (12, 'Oral', '15 mg/kg cada 12 horas', 'No administrar a animales con historial de alergia a la penicilina.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (13, 'Oral / Subcutánea', '0.2 mg/kg el primer día, luego 0.1 mg/kg', 'Contraindicado en pacientes con úlceras gastrointestinales o deshidratación.');
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (12, 'Oral', '15 mg/kg cada 12 horas', 'No administrar a animales con historial de alergia a la penicilina.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (13, 'Oral / Subcutánea', '0.2 mg/kg el primer día, luego 0.1 mg/kg', 'Contraindicado en pacientes con úlceras gastrointestinales o deshidratación.', 100);
 insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (14, 'Oral', '1 a 2 mg/kg cada 24 horas', 'No interrumpir el tratamiento abruptamente si ha sido prolongado.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (15, 'Oral / Inyectable', '5 mg/kg cada 24 horas', 'Evitar en animales jóvenes en fase de crecimiento por riesgo de daño en cartílagos.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (16, 'Oral / Subcutánea', '0.2 a 0.4 mg/kg dosis única', 'Altamente tóxico en razas tipo Collie, Pastor Australiano y sus cruzas.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (17, 'Oral', '10 mg/kg cada 24 horas con comida', 'Puede causar esofagitis, administrar siempre acompañada de agua o alimento.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (18, 'Oral', '0.7 a 1 mg/kg cada 24 horas en ayunas', 'El uso prolongado puede afectar la absorción de ciertos nutrientes.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (19, 'Oral / Intravenosa', '15 a 25 mg/kg cada 12 horas', 'Puede generar trastornos neurológicos temporales si se exceden las dosis.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (20, 'Oral / Intramuscular', '2 a 4 mg/kg cada 8 horas', 'Puede provocar sedación profunda, estreñimiento o cambios de conducta leves.');
-insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (21, 'Intramuscular / Subcutánea', '0.5 a 1 ml por cada 10 kg', 'Mantener refrigerado y proteger de la luz solar directa.');
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (15, 'Oral / Inyectable', '5 mg/kg cada 24 horas', 'Evitar en animales jóvenes en fase de crecimiento por riesgo de daño en cartílagos.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (16, 'Oral / Subcutánea', '0.2 a 0.4 mg/kg dosis única', 'Altamente tóxico en razas tipo Collie, Pastor Australiano y sus cruzas.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (17, 'Oral', '10 mg/kg cada 24 horas con comida', 'Puede causar esofagitis, administrar siempre acompañada de agua o alimento.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (18, 'Oral', '0.7 a 1 mg/kg cada 24 horas en ayunas', 'El uso prolongado puede afectar la absorción de ciertos nutrientes.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (19, 'Oral / Intravenosa', '15 a 25 mg/kg cada 12 horas', 'Puede generar trastornos neurológicos temporales si se exceden las dosis.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (20, 'Oral / Intramuscular', '2 a 4 mg/kg cada 8 horas', 'Puede provocar sedación profunda, estreñimiento o cambios de conducta leves.', 100);
+insert into Medicamento (ID_Medicamento, Via, Dosis_Recomendada, Precauciones) values (21, 'Intramuscular / Subcutánea', '0.5 a 1 ml por cada 10 kg', 'Mantener refrigerado y proteger de la luz solar directa.', 100);
 --select * from Medicamento;
 
 
@@ -410,6 +410,16 @@ insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) value
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (90,1,13,22);
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (12,1,13,11);
 --select * from detalle_factura;
+
+-- PAGO (Poblacion automática y aleatoria)
+insert into Pago (monto, metodo_pago, num_factura)
+select 
+    monto, 
+    -- metodo de pago al azar del array
+    (array['Efectivo', 'Transferencia', 'Bitcoin', 'Tarjeta'])[floor(random() * 4 + 1)::int], 
+    num_factura 
+from Factura 
+where monto > 0;
 
 
 

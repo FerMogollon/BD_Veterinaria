@@ -152,7 +152,9 @@ create table Medicamento(
 	Via varchar(150) not null,
 	Dosis_Recomendada varchar(150) not null,
 	Precauciones varchar(500) not null,
+	stock int not null default 0,
 	constraint pk_medicamento primary key (ID_Medicamento),
+	constraint ck_medicamento_stock check(stock >= 0),
 	constraint fk_medicamento_item foreign key (ID_Medicamento)
 		references Item_Facturable(ID_Item)
 		on update cascade on delete restrict
@@ -184,6 +186,20 @@ create table Tratamiento(
 		on update cascade on delete restrict,
 	constraint fk_tratamiento_medicamento foreign key(ID_Medicamento)
 		references Medicamento(ID_Medicamento)
+		on update cascade on delete restrict
+);
+
+create table Pago(
+	id_pago bigint generated always as identity,
+	monto numeric(10,2) not null,
+	metodo_pago varchar(20) not null,
+	fecha_pago timestamp not null default current_timestamp,
+	num_factura bigint not null,
+	constraint pk_pago primary key(id_pago),
+	constraint ck_pago_monto check (monto > 0),
+	constraint ck_pago_metodo check (metodo_pago in('Efectivo', 'Transferencia', 'Bitcoin', 'Tarjeta')),
+	constraint fk_pago_num_factura foreign key (num_factura)
+		references factura(num_factura)
 		on update cascade on delete restrict
 );
 
@@ -262,22 +278,31 @@ execute function verificar_alergia_medicamento();
 
 create or replace function verificar_inventario_medicamento() 
 returns trigger as $$
-	declare 
-		stock_actual int;
-	begin
-		select stock into stock_actual
-		from item_facturable
-		where id_item = new.id_item;
-		
-		if stock_actual < new.cantidad then 
-			raise exception 'Bajo inventario de item ID: %. Disponible: %, Solicitado: %', new.id_item, stock_actual, new.cantidad;
-		end if;
+declare 
+    v_stock_actual int;
+begin
+    select stock into v_stock_actual
+    from Medicamento
+    where ID_Medicamento = new.ID_Item;
+    
+    if v_stock_actual is not null then 
+        if v_stock_actual < new.cantidad then 
+            raise exception 'Inventario insuficiente para el medicamento ID: %. Disponible: %, Solicitado: %', new.ID_Item, v_stock_actual, new.cantidad;
+        end if;
 
-		return new;
-	end;
+        update Medicamento
+        set stock = stock - new.cantidad
+        where ID_Medicamento = new.ID_Item;
+    end if;
+
+	-- Si v_stock_actual es nulo es porque es un procedimiento y no un medicamento
+    return new;
+end;
 $$ language plpgsql;
 
-create trigger actualizar_inventario before insert or update on detalle_factura
+-- Mantener el trigger activandose antes de insertar en el detalle
+create trigger trg_actualizar_inventario 
+before insert on detalle_factura
 for each row
 execute function verificar_inventario_medicamento();
 
@@ -285,15 +310,18 @@ execute function verificar_inventario_medicamento();
 --trigger para el estado de las citas
 create or replace function actualizacion_citas()
 returns trigger as $$
-	begin
-		if new.estado = 'Cancelado' then return new;
-		end if;
+begin
+    -- esto es para que si la cita ya viene como completada o cancelada el trigger lo respete
+    if new.estado in ('Cancelada', 'Completada') then 
+        return new;
+    end if;
 
-		if new.fecha < current_date then new.estado := 'Cancelado';
-		elseif new.fecha = current_date then new.estado := 'Completado';
-		end if;
-		return new;
-	end;
+    if new.fecha < current_date then 
+        new.estado := 'Cancelada';
+    end if;
+    
+    return new;
+end;
 $$ language plpgsql;
 
 create trigger actualizar_citas before insert or update on cita
@@ -308,9 +336,36 @@ create or replace procedure citas_completadas_portiempo_vencido()
 as $$
 	begin
 		update cita
-		set estado = 'Cancelado'
-    	where fecha < current_date and estado not in ('Completado', 'Cancelado');
+		set estado = 'Cancelada'
+    	where fecha < current_date and estado not in ('Completada', 'Cancelada');
 	end;
 $$ language plpgsql;
 
 ----
+-- verificar la propiedad de la mascota
+create or replace function fn_validar_dueño_factura()
+returns trigger as $$
+declare
+    v_propietario_real bigint;
+begin
+    -- buscar quien es el dueño verdadero (Cita -> Mascota)
+    select m.ID_Propietario into v_propietario_real
+    from Cita c
+    join Mascota m on c.ID_Mascota = m.ID_Mascota
+    where c.ID_Cita = new.ID_Cita;
+
+    -- Si el ID que intenta facturar no coincide con el dueño verdadero, se bloquea la transaccian
+    if new.ID_Propietario != v_propietario_real then
+        raise exception 'VIOLACIÓN DE LoGICA DE NEGOCIO: Intento de fraude o error. El cliente (ID: %) no es el dueño de la mascota de la cita %. El dueño legítimo es el cliente (ID: %).', new.ID_Propietario, new.ID_Cita, v_propietario_real;
+    end if;
+
+    -- Si todo coincide dejamos que el insert o update continue normalmente
+    return new;
+end;
+$$ language plpgsql;
+
+-- disparador que vigila la tabla Factura
+create trigger trg_seguridad_facturacion
+before insert or update on Factura
+for each row
+execute function fn_validar_dueño_factura();
