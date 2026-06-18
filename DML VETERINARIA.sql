@@ -446,9 +446,9 @@ update factura set id_propietario = 13
 where id_cita = 15;
 
 -- esta de aqui da error, validando el funcionamiento de nuestro trigger validar dueño factura
-update factura
-set id_propietario = 13
-where id_cita = 13;
+-- update factura
+-- set id_propietario = 13
+-- where id_cita = 13;
 
 update factura set id_propietario = 2
 where id_cita = 13;
@@ -459,16 +459,16 @@ where id_cita = 14;
 
 
 --CONFIRMAR Q LOS IDS DE LAS FACTURAS COINCIDAN CON LOS PROPIETARIOS DE LAS MASCOTAS
---select
---    f.num_factura,
---    f.id_cita,
---    c.id_mascota,
---    m.id_propietario as propietario_correcto,
---    f.id_propietario as propietario_en_factura
---from factura f
---join cita c on f.id_cita = c.id_cita
---join mascota m on c.id_mascota = m.id_mascota
---where f.id_propietario <> m.id_propietario;
+select
+   f.num_factura,
+   f.id_cita,
+   c.id_mascota,
+   m.id_propietario as propietario_correcto,
+   f.id_propietario as propietario_en_factura
+from factura f
+join cita c on f.id_cita = c.id_cita
+join mascota m on c.id_mascota = m.id_mascota
+where f.id_propietario <> m.id_propietario;
 
 
 
