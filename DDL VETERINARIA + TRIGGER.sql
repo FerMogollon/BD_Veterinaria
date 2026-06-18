@@ -273,23 +273,8 @@ before insert or update on Tratamiento
 for each row
 execute function verificar_alergia_medicamento();
 
---probar funcionamiento del disparador del control de alergias
-update medicamento 
-set precauciones = 'Altamente contraindicado en la especie Cobaya por shocks alérgicos agudos.' 
-where ID_Medicamento = 12;
 
-insert into diagnostico (Descripcion, ID_Cita) 
-values ('Evaluación de rutina para Manchitas la Cobaya', 22);
 
-insert into tratamiento (Frecuencia, Dosis, Vigencia, Descripcion, ID_Diagnostico, ID_Medicamento) 
-values (
-    'Cada 12 horas', 
-    '250 mg', 
-    '2026-07-20', 
-    'Tratamiento de prueba alérgica', 
-    (select max(id_diagnostico) from diagnostico), -- Captura el ID recién creado
-    12
-);
 
 
 --Trigger de inventario
