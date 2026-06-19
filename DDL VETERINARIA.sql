@@ -88,9 +88,11 @@ create table Factura(
 	Num_Factura bigint generated always as identity,
 	Fecha date default current_date,
 	Monto numeric(10,2) not null,
+	Estado_Pago varchar(15) not null default 'Pendiente',
 	ID_Cita bigint not null,
 	ID_Propietario bigint not null,
 	constraint pk_factura primary key(Num_Factura),
+	constraint ck_factura_estado_pago check(estado_pago in ('Pendiente', 'Parcial', 'Pagado')
 	constraint uq_factura_cita unique(ID_Cita),
 	constraint ck_factura_monto check(Monto > 0),
 	constraint fk_factura_cita foreign key(ID_Cita)

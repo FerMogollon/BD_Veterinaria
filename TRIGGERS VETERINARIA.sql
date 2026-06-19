@@ -6,9 +6,14 @@ returns trigger as $$
 declare
     v_num_factura bigint;
 begin
+    -- Evaluar que tipo de operacion se está haciendo para evitar el error de NEW
+    if TG_OP = 'DELETE' then
+        v_num_factura := OLD.num_factura;
+    else
+        v_num_factura := NEW.num_factura;
+    end if;
 
-    v_num_factura := coalesce(new.num_factura, old.num_factura);
-
+    -- Recalcular el total de la factura
     update factura
     set monto = (
         select coalesce(
@@ -20,8 +25,12 @@ begin
     )
     where num_factura = v_num_factura;
 
-    return null;
-
+    -- Retornar la variable correcta segun la operación
+    if TG_OP = 'DELETE' then
+        return OLD;
+    else
+        return NEW;
+    end if;
 end;
 $$ language plpgsql;
 
@@ -165,18 +174,32 @@ for each row
 execute function fn_validar_dueño_factura();
 
 
--- Cambiar el estado de la cita a 'Completada' al registrar el ingreso de dinero
-create or replace function Estado_cita_por_pago_completado() 
+-- Procesar el pago para calcular saldos y finalzar la cita medica
+create or replace function procesar_pago_y_estado() 
 returns trigger as $$
 declare
     v_id_cita bigint;
+    v_monto_total numeric(10,2);
+    v_total_pagado numeric(10,2);
 begin
-    -- Navegar desde la factura hasta ubicar la cita correspondiente al pago
-    select id_cita into v_id_cita
+    -- Obtener informacion generl de la factura
+    select id_cita, monto into v_id_cita, v_monto_total
     from factura
     where num_factura = new.num_factura;
 
-    -- Modificar el registro original de la cita para dar por finalizada la atencion
+    -- Sumar el total de los pagos registrados para esta misma factura
+    select coalesce(sum(monto), 0) into v_total_pagado
+    from pago
+    where num_factura = new.num_factura;
+
+    -- Evaluar el total pagado contra el monto cobrado para actualizar el estado financiero
+    if v_total_pagado >= v_monto_total then
+        update factura set estado_pago = 'Pagado' where num_factura = new.num_factura;
+    else
+        update factura set estado_pago = 'Parcial' where num_factura = new.num_factura;
+    end if;
+
+    -- Modificar el registro de la cita para dar por finalizada la atención médica
     update cita
     set estado = 'Completada'
     where id_cita = v_id_cita and estado != 'Completada';
@@ -185,7 +208,8 @@ begin
 end;
 $$ language plpgsql;
 
-create trigger estado_por_pago_factura 
+-- Asignar el nuevo disparador a la tabla de pagos
+create trigger trg_procesar_pago_estado 
 after insert on pago
 for each row 
-execute function Estado_cita_por_pago_completado();
+execute function procesar_pago_y_estado();
