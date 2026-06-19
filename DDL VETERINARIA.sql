@@ -92,7 +92,7 @@ create table Factura(
 	ID_Cita bigint not null,
 	ID_Propietario bigint not null,
 	constraint pk_factura primary key(Num_Factura),
-	constraint ck_factura_estado_pago check(estado_pago in ('Pendiente', 'Parcial', 'Pagado')
+	constraint ck_factura_estado_pago check(estado_pago in ('Pendiente', 'Parcial', 'Pagado')),
 	constraint uq_factura_cita unique(ID_Cita),
 	constraint ck_factura_monto check(Monto > 0),
 	constraint fk_factura_cita foreign key(ID_Cita)
