@@ -734,7 +734,7 @@ insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) value
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (20,1,13,1);
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (90,1,13,22);
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (12,1,13,11);
-select * from detalle_factura;
+-- select * from detalle_factura;
 
 -- PAGO (Poblacion automática y aleatoria)
 insert into Pago (monto, metodo_pago, num_factura)
