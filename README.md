@@ -18,7 +18,7 @@ Ejecuta el siguiente comando:
 docker exec -it [NOMBRE_CONTENEDOR] psql -U postgres -c "CREATE DATABASE [NOMBRE_BASE];"
 ```
 
-## 2. Crear el esquema (tablas, restricciones y triggers)
+## 2. Crear el esquema (tablas)
 
 1. Abre la terminal y navega hasta la carpeta del repositorio ocupando:
 ```bash
@@ -30,7 +30,7 @@ o directamente abre la terminal en la carpeta.
 
 2. Ejecuta el siguiente comando en la teminal:
 ```bash
-cp '.\DDL VETERINARIA + TRIGGER.sql' [NOMBRE BASE]:/tmp/script1.sql
+cp '.\DDL VETERINARIA' [NOMBRE CONTENEDOR]:/tmp/script1.sql
 ```
 
 *Si se ejecuto correctamente recibiras el siguiente mensaje:*
@@ -47,26 +47,55 @@ exec -it [NOMBRE CONTENEDOR] psql -U postgres -d [NOMBRE BASE] -f /tmp/script1.s
 ```bash
 CREATE TABLE
 CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
 ALTER TABLE
 ALTER TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
+.
+.
+.
 CREATE TABLE
 CREATE TABLE
 CREATE FUNCTION
 CREATE TRIGGER
 ```
 
+## 3. Agregar las restricciones y triggers
 
-## 3. Cargar los datos iniciales
+1. Abre la terminal y navega hasta la carpeta del repositorio ocupando:
+```bash
+cd .\BD_Veterinaria\
+```
+o directamente abre la terminal en la carpeta.
+
+**Nota:** Si estás utilizando Docker, antepone `docker` a los comandos `cp` y `exec`.
+
+2. Ejecuta el siguiente comando en la teminal:
+```bash
+cp '.\TRIGGERS VETERINARIA.sql'  [NOMBRE CONTENEDOR]:/tmp/script2.sql
+```
+
+*Si se ejecuto correctamente recibiras el siguiente mensaje:*
+```bash
+Successfully copied 7.56kB (transferred 9.22kB) to postgres-db:/tmp/script2.sql
+ ```
+
+3. Ejecuta el siguiente comando en la terminal:
+```bash
+exec -it [NOMBRE CONTENEDOR] psql -U postgres -d [NOMBRE BASE] -f /tmp/script2.sql 
+```
+
+*Si el script se ejecutó correctamente, deberías obtener una salida similar a la siguiente:*
+```bash
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE FUNCTION
+.
+.
+.
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE TRIGGER
+```
+## 4. Cargar los datos iniciales
 
 1. Verifica que la terminal sigua en la carpeta del repositorio, en caso de contrario abre la terminal y navega hasta la carpeta del repositorio ocupando:
 ```bash
@@ -78,17 +107,17 @@ o directamente abre la terminal en la carpeta.
 
 2. Ejecuta el siguiente comando en la teminal:
 ```bash
-cp '.\DML VETERINARIA.sql' [NOMBRE BASE]:/tmp/script2.sql
+cp '.\DML VETERINARIA.sql' [NOMBRE CONTENEDOR]:/tmp/script3.sql
 ```
 
 *Si se ejecuto correctamente recibiras el siguiente mensaje:*
 ```bash
-Successfully copied 41.1kB (transferred 43kB) to postgres-db:/tmp/script2.sql
+Successfully copied 41.1kB (transferred 43kB) to postgres-db:/tmp/script3.sql
  ```
 
 3. Ejecuta el siguiente comando en la terminal:
 ```bash
-exec -it [NOMBRE CONTENEDOR] psql -U postgres -d [NOMBRE BASE] -f /tmp/script2.sql
+exec -it [NOMBRE CONTENEDOR] psql -U postgres -d [NOMBRE BASE] -f /tmp/script3.sql
 ```
 
 *Si el script se ejecutó correctamente, deberías obtener una salida similar a la siguiente:*
@@ -97,15 +126,10 @@ INSERT 0 1
 INSERT 0 1
 INSERT 0 1
 INSERT 0 1
-INSERT 0 1
-INSERT 0 1
-INSERT 0 1
 .
 .
 .
 UPDATE 6
-UPDATE 1
-UPDATE 1
 UPDATE 1
 UPDATE 2
 UPDATE 1
