@@ -599,6 +599,108 @@ insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) 
 insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) values ('2026-2-21', '14:53:53', 'Consultorio B', 'Programada', 41, 3);
 insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) values ('2026-3-5', '6:27:30', 'Consultorio A', 'Programada', 60, 4);
 insert into Cita (Fecha, Hora, Consultorio, Estado, ID_Mascota, ID_Veterinario) values ('2026-6-15', '7:50:10', 'Consultorio C', 'Programada', 65, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2019-08-13', '3:23 PM', 'Consultorio B', 'Completada', 128, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2019-05-19', '11:33 AM', 'Consultorio C', 'Completada', 5, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-11-05', '9:35 AM', 'Consultorio A', 'Completada', 101, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-03-02', '7:16 PM', 'Consultorio C', 'Completada', 115, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-03-24', '6:13 AM', 'Consultorio B', 'Completada', 80, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-06-03', '3:03 PM', 'Consultorio C', 'Completada', 61, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-12-11', '11:33 AM', 'Consultorio A', 'Completada', 31, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-11-28', '7:03 PM', 'Consultorio A', 'Completada', 83, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-04-02', '5:30 AM', 'Consultorio A', 'Completada', 80, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-02-27', '10:58 AM', 'Consultorio C', 'Completada', 64, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2026-04-10', '10:41 AM', 'Consultorio A', 'Completada', 58, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-06-04', '1:22 PM', 'Consultorio A', 'Completada', 76, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-07-26', '5:40 PM', 'Consultorio C', 'Completada', 14, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-04-30', '3:06 PM', 'Consultorio B', 'Completada', 44, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-06-25', '6:36 PM', 'Consultorio B', 'Completada', 114, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-10-16', '1:48 PM', 'Consultorio B', 'Completada', 9, 3);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-10-24', '7:37 PM', 'Consultorio B', 'Completada', 129, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2015-12-12', '7:51 AM', 'Consultorio C', 'Completada', 11, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-01-23', '6:11 AM', 'Consultorio B', 'Completada', 18, 2);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-10-12', '7:55 AM', 'Consultorio C', 'Completada', 52, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-04-23', '7:41 PM', 'Consultorio B', 'Completada', 45, 6);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-02-24', '7:46 AM', 'Consultorio C', 'Completada', 110, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-10-30', '5:13 PM', 'Consultorio A', 'Completada', 33, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-05-18', '6:31 PM', 'Consultorio B', 'Completada', 69, 2);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-07-15', '7:59 PM', 'Consultorio B', 'Completada', 8, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-07-24', '11:28 AM', 'Consultorio B', 'Completada', 64, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-05-27', '8:23 AM', 'Consultorio A', 'Completada', 90, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-07-24', '2:05 PM', 'Consultorio C', 'Completada', 26, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-01-24', '2:15 PM', 'Consultorio C', 'Completada', 95, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-01-05', '10:39 AM', 'Consultorio A', 'Completada', 102, 3);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-08-06', '11:59 AM', 'Consultorio B', 'Completada', 8, 6);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-08-10', '11:24 AM', 'Consultorio C', 'Completada', 114, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2019-02-18', '5:57 PM', 'Consultorio B', 'Completada', 50, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-12-02', '11:03 AM', 'Consultorio B', 'Completada', 125, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-01-06', '11:12 AM', 'Consultorio C', 'Completada', 112, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-03-03', '8:26 AM', 'Consultorio B', 'Completada', 136, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-05-09', '12:31 PM', 'Consultorio C', 'Completada', 111, 6);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-06-08', '5:54 PM', 'Consultorio B', 'Completada', 101, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-01-16', '5:38 PM', 'Consultorio C', 'Completada', 29, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2015-06-06', '9:48 AM', 'Consultorio C', 'Completada', 44, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-09-15', '6:11 AM', 'Consultorio B', 'Completada', 90, 6);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2018-03-24', '1:18 PM', 'Consultorio A', 'Completada', 94, 3);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-09-15', '6:51 AM', 'Consultorio B', 'Completada', 52, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-03-07', '12:47 PM', 'Consultorio C', 'Completada', 6, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-05-19', '11:00 AM', 'Consultorio B', 'Completada', 55, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2015-08-27', '7:43 AM', 'Consultorio A', 'Completada', 69, 3);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-02-08', '7:16 PM', 'Consultorio A', 'Completada', 14, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-05-30', '2:16 PM', 'Consultorio B', 'Completada', 45, 6);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2018-04-18', '12:28 PM', 'Consultorio B', 'Completada', 7, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-11-28', '3:27 PM', 'Consultorio B', 'Completada', 138, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-07-12', '6:41 AM', 'Consultorio C', 'Completada', 35, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2018-08-21', '9:37 AM', 'Consultorio A', 'Completada', 104, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-07-24', '3:09 PM', 'Consultorio C', 'Completada', 32, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2026-04-22', '6:35 AM', 'Consultorio B', 'Completada', 133, 3);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-05-16', '7:54 AM', 'Consultorio A', 'Completada', 64, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2018-01-08', '7:47 PM', 'Consultorio B', 'Completada', 105, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-09-27', '5:48 PM', 'Consultorio B', 'Completada', 31, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-05-21', '1:27 PM', 'Consultorio C', 'Completada', 66, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-09-14', '11:29 AM', 'Consultorio C', 'Completada', 33, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2015-08-04', '9:27 AM', 'Consultorio B', 'Completada', 54, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-11-02', '6:28 AM', 'Consultorio C', 'Completada', 59, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-12-12', '3:57 PM', 'Consultorio A', 'Completada', 45, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-11-22', '12:52 PM', 'Consultorio C', 'Completada', 140, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2015-09-22', '1:15 PM', 'Consultorio C', 'Completada', 123, 6);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-11-05', '7:24 PM', 'Consultorio A', 'Completada', 82, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-03-25', '6:48 AM', 'Consultorio A', 'Completada', 106, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-08-13', '3:13 PM', 'Consultorio A', 'Completada', 88, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-11-15', '7:52 AM', 'Consultorio B', 'Completada', 65, 3);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2018-04-24', '6:58 PM', 'Consultorio A', 'Completada', 33, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-05-24', '11:21 AM', 'Consultorio C', 'Completada', 45, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-05-21', '2:21 PM', 'Consultorio A', 'Completada', 136, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-04-25', '11:28 AM', 'Consultorio A', 'Completada', 19, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-02-01', '4:48 PM', 'Consultorio C', 'Completada', 38, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-05-19', '6:58 PM', 'Consultorio A', 'Completada', 10, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-11-14', '2:29 PM', 'Consultorio C', 'Completada', 12, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-09-07', '10:24 AM', 'Consultorio C', 'Completada', 60, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-07-21', '5:44 AM', 'Consultorio C', 'Completada', 69, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-11-28', '7:06 AM', 'Consultorio B', 'Completada', 90, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2018-11-16', '5:43 PM', 'Consultorio C', 'Completada', 56, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2015-08-02', '9:18 AM', 'Consultorio A', 'Completada', 83, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-05-31', '3:14 PM', 'Consultorio B', 'Completada', 110, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-07-25', '6:19 AM', 'Consultorio A', 'Completada', 113, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-01-08', '6:31 PM', 'Consultorio B', 'Completada', 14, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-05-19', '12:44 PM', 'Consultorio C', 'Completada', 124, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-06-27', '2:42 PM', 'Consultorio B', 'Completada', 88, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-12-14', '8:25 AM', 'Consultorio B', 'Completada', 114, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-01-05', '7:01 AM', 'Consultorio A', 'Completada', 61, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2022-11-12', '4:39 PM', 'Consultorio C', 'Completada', 90, 3);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-04-11', '1:18 PM', 'Consultorio C', 'Completada', 79, 7);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2025-10-07', '1:32 PM', 'Consultorio C', 'Completada', 37, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-07-06', '5:28 PM', 'Consultorio B', 'Completada', 123, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-02-08', '11:28 AM', 'Consultorio A', 'Completada', 39, 9);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2016-05-03', '5:48 AM', 'Consultorio B', 'Completada', 47, 5);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2023-09-10', '6:58 PM', 'Consultorio A', 'Completada', 12, 2);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2017-11-11', '2:02 PM', 'Consultorio A', 'Completada', 77, 1);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2020-09-09', '6:23 AM', 'Consultorio B', 'Completada', 17, 6);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2024-03-31', '4:54 PM', 'Consultorio C', 'Completada', 55, 4);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2019-11-27', '3:15 PM', 'Consultorio B', 'Completada', 93, 10);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2015-10-11', '9:53 AM', 'Consultorio A', 'Completada', 77, 8);
+insert into Cita (Fecha, Hora, Consultorio, Estado, ID_mascota, ID_Veterinario) values ('2021-09-21', '6:56 AM', 'Consultorio A', 'Completada', 9, 8);
+
+
 -- select * from cita;
 
 
@@ -622,6 +724,106 @@ insert into diagnostico (descripcion,id_cita) values ('acumulacion de sarro dent
 insert into diagnostico (descripcion,id_cita) values ('sobrepeso',9);
 insert into diagnostico (descripcion,id_cita) values ('irritacion ocular leve',6);
 insert into diagnostico (descripcion,id_cita) values ('dolor muscular',15);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 158);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 151);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 155);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 165);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 173);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 149);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 207);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 163);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 149);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 155);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 228);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 174);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 199);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 218);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 136);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 200);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 184);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 144);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 165);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 214);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 153);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 235);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 234);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 155);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 208);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 171);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 147);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 177);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 200);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 163);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 179);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 208);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 208);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 199);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 197);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 207);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 232);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 174);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 136);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 145);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 213);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 186);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 214);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 165);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 173);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 149);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 140);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 220);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 183);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 226);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 191);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 234);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 202);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 185);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 197);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 215);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 213);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 150);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 198);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 156);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 189);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 178);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 189);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 189);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 138);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 221);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 191);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 211);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 154);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 137);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 177);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 171);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 204);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 235);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 222);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 148);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 209);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 219);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 162);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 227);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 144);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 235);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 203);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 193);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 198);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 171);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 235);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 191);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 188);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 214);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 167);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 173);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 152);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 195);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 146);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 227);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 184);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 187);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 230);
+insert into Diagnostico (Descripcion, ID_Cita) values ('parasitosis intestinal', 165);
 --select * from diagnostico;
 
 
@@ -643,6 +845,11 @@ insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (
 insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (29,13);
 insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (35,16);
 insert into diagnostico_procedimiento (id_procedimiento,id_diagnostico) values (28,17);
+-- Nuevos datos agregados utilizando select
+insert into diagnostico_procedimiento (id_diagnostico, id_procedimiento)
+select id_diagnostico, 5
+from diagnostico
+where id_diagnostico between 18 and 118;
 --select * from diagnostico_procedimiento;
 
 
@@ -690,7 +897,105 @@ insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-14',0,
 insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-16',0,13,2);
 insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-16',0,14,12);
 insert into factura (fecha,monto,id_cita,id_propietario) values ('2026-05-17',0,15,13);
-select * from factura;
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2025-03-29', 138, 104, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-08-09', 139, 88, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2018-11-03', 140, 86, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2015-05-31', 141, 95, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-08-15', 142, 12, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-05-29', 143, 114, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2016-07-04', 144, 86, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2021-03-14', 145, 108, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-12-28', 146, 87, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2018-05-12', 147, 135, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-04-25', 148, 12, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-03-20', 149, 96, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-08-06', 150, 84, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2018-01-31', 151, 8, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-05-31', 152, 113, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-02-11', 153, 10, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-01-10', 154, 16, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-06-19', 155, 62, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2025-08-08', 156, 57, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-12-22', 157, 87, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-07-22', 158, 24, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-09-05', 159, 28, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2018-12-12', 160, 7, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-10-10', 161, 108, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-03-11', 162, 53, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-06-10', 163, 7, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-08-07', 164, 68, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2018-04-02', 165, 90, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-04-09', 166, 7, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-03-29', 167, 84, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2018-11-17', 168, 132, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2021-09-19', 169, 69, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2019-10-20', 170, 114, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2021-02-19', 171, 36, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-03-13', 172, 127, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-12-13', 173, 104, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2025-06-03', 174, 10, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-03-21', 175, 96, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-04-27', 176, 53, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-11-06', 177, 83, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2019-08-08', 178, 62, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2021-06-14', 179, 23, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-01-13', 180, 56, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-03-11', 181, 28, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2021-10-18', 182, 12, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2016-11-13', 183, 57, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-11-30', 184, 6, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-03-08', 185, 115, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2025-04-06', 186, 16, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-08-28', 187, 114, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2019-02-16', 188, 13, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-12-20', 189, 140, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2015-12-26', 190, 108, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-12-12', 191, 134, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-07-03', 192, 12, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2019-09-06', 193, 96, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-05-18', 194, 24, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-10-12', 195, 102, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-08-11', 196, 71, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2015-08-24', 197, 57, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2026-03-22', 198, 38, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-11-16', 199, 33, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-08-02', 200, 105, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-03-24', 201, 68, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-05-27', 202, 102, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-08-17', 203, 99, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-06-18', 204, 24, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-10-02', 205, 57, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-04-06', 206, 36, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2016-02-15', 207, 3, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-05-23', 208, 19, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-02-03', 209, 9, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2018-09-24', 210, 11, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2017-12-07', 211, 129, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2021-06-04', 212, 28, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2019-02-19', 213, 53, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2026-04-04', 214, 107, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-04-14', 215, 114, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-08-06', 216, 87, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2025-08-06', 217, 131, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-02-26', 218, 12, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2023-04-30', 219, 127, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-03-02', 220, 102, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-09-12', 221, 84, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2016-08-23', 222, 95, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-01-25', 223, 53, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2015-03-25', 224, 79, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-03-21', 225, 22, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2016-04-10', 226, 33, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2022-05-25', 227, 20, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2019-04-24', 228, 94, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2021-01-05', 229, 11, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2025-10-29', 230, 105, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-02-20', 231, 15, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2025-10-02', 232, 56, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2020-04-05', 233, 74, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2024-04-18', 234, 105, 8);
+insert into factura (Fecha, ID_Cita, ID_Propietario, monto) values ('2026-02-04', 235, 8, 8);
+-- select * from factura;
 
 
 
@@ -734,6 +1039,12 @@ insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) value
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (20,1,13,1);
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (90,1,13,22);
 insert into detalle_factura (precio_unitario,cantidad,num_factura,id_item) values (12,1,13,11);
+-- Nuevos datos utilizando select
+insert into detalle_factura (precio_unitario, cantidad, num_factura, id_item)
+select
+    8, 1, num_factura, 5
+from factura
+where num_factura between 14 and 114;
 -- select * from detalle_factura;
 
 -- PAGO (Poblacion automática y aleatoria)
@@ -745,4 +1056,16 @@ select
     num_factura 
 from Factura 
 where monto > 0;
+-- Nuevos datos en pago ocupando select, metodo de pago al azar y fecha al azar
+insert into pago (num_factura, monto, fecha_pago, metodo_pago)
+select
+    num_factura, 8,  date '2015-03-01' + floor(random() * (date '2026-06-19' - date '2015-03-01' + 1))::int,
+    (array['Efectivo', 'Transferencia', 'Bitcoin', 'Tarjeta'])[floor(random() * 4 + 1)::int]
+from factura
+where num_factura between 14 and 114;
+
 --select * from pago;
+
+
+
+-- 
